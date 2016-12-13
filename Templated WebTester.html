@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <meta charset="utf-8">
+	  <title>The Crypt</title>
+	  
+	  <!-- incluse stylesheet files here -->
+	  <link rel="stylesheet" href="./css/theCrypt.css" />
+	  
+	</head>
+
+	<body>
+		<h1>The Crypt</h1>
+		
+		  <div id="views">
+			<div id="place"></div>
+			<div id="player"></div>
+		  </div>
+		
+		<div id="messages"></div>
+		
+		<div id="controls">
+			<input type="text" id="txtCommand" />
+			<button id="btnCommand">Submit</button>
+		</div>
+		
+		<!-- Templates -->
+  
+		<script type="text/x-template" id="itemTemplate">
+			<li>{{item}}</li>
+		</script>
+		  
+		<script type="text/x-template" id="playerTemplate">
+			<h3>{{name}}</h3>
+			<p>{{health}}</p>
+			  
+			<ol id="playerItems"></ol>
+		</script>
+		  
+		<script type="text/x-template" id="placeTemplate">
+			<h3>{{title}}</h3>
+			<p>{{description}}</p>
+			  
+			<div class="placePanel">
+				<h4>Items</h4>
+				<ol id="placeItems"></ol>
+			</div>
+			  
+			<div class="placePanel">
+				<h4>Exits</h4>
+				<ol id="placeExits"></ol>
+			</div>
+		</script>
+		  
+		<script type="text/x-template" id="messageTemplate">
+			<p>*** {{message}} ***</p>
+		</script>
+		
+		<!-- include source files here... -->
+		<script type="text/javascript" src="./js/helpers/map.js"></script>
+		<script type="text/javascript" src="./js/helpers/spacer.js"></script>	  
+		<script type="text/javascript" src="./js/helpers/templater.js"></script>
+		  
+		<script type="text/javascript" src="./js/model/player.js"></script>
+		<script type="text/javascript" src="./js/model/place.js"></script>
+		 
+		<script type="text/javascript" src="./js/views/player.js"></script>
+		<script type="text/javascript" src="./js/views/place.js"></script>
+		<script type="text/javascript" src="./js/views/message.js"></script>
+		  
+		<script type="text/javascript" src="./js/controllers/theCryptController.js"></script>
+		<script type="text/javascript" src="./js/controllers/viewControllerAdapter.js"></script>
+		  
+		<script type="text/javascript" src="./js/theCrypt.js"></script>		
+	</body>
+</html>
